@@ -209,11 +209,20 @@ namespace Permadeath.Patches
                     UnityEngine.Object.Destroy(array2[k].gameObject);
                 }
                 __instance.livingPlayers = __instance.connectedPlayersAmount + 1;
+                
+
+                
                 __instance.allPlayersDead = false;
                 __instance.UpdatePlayerVoiceEffects();
                 __instance.shipAnimator.ResetTrigger("ShipLeave");
 
-
+                for(int i = 0; i < ___allPlayerScripts.Length; i++)
+                {
+                    if (___allPlayerScripts[i].isPlayerDead)
+                    {
+                        __instance.livingPlayers--;
+                    }
+                }
 
                 //___allPlayerScripts = new PlayerControllerB[playersToRespawn.Count];
 
