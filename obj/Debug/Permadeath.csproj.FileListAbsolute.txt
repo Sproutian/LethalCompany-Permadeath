@@ -9,10 +9,7 @@ C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\Mono.Cecil.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\MonoMod.Utils.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\MonoMod.RuntimeDetour.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\netstandard.dll
-C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\UnityEngine.AnimationModule.dll
-C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\UnityEngine.AudioModule.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\Unity.Animation.Rigging.dll
-C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\UnityEngine.PhysicsModule.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\UnityEngine.ParticleSystemModule.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\UnityEngine.UI.dll
 C:\Users\brief\source\repos\Permadeath\Permadeath\bin\Debug\Unity.TextMeshPro.dll
