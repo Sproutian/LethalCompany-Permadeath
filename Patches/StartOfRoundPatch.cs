@@ -29,29 +29,29 @@ namespace Permadeath.Patches
             int daysToDeadline = timeOfDay.daysUntilDeadline;
             if (daysToDeadline == 0 || (daysToDeadline == 1 && ___shipIsLeaving == true) || (daysToDeadline == 3 && ___shipIsLeaving == false))
             {
-                //FileLog.Log("Not reviving players (days til deadline: " + daysToDeadline + ")");
+                //FileLig.Log("Not reviving players (days til deadline: " + daysToDeadline + ")");
 
                 return true;
 
             }
             else
             {
-                //FileLog.Log("Doing the ELSE");
+                //FileLig.Log("Doing the ELSE");
                 List<PlayerControllerB> playersToRespawn = new List<PlayerControllerB>();
                 DeadBodyInfo[] bodies = UnityEngine.Object.FindObjectsOfType<DeadBodyInfo>();
-                //FileLog.Log("# bodies: "+bodies.Length);
+                //FileLig.Log("# bodies: "+bodies.Length);
 
                 for (int i = 0; i < bodies.Length; i++)
                 {
-                    //FileLog.Log("Checking a body");
+                    //FileLig.Log("Checking a body");
                     if (bodies[i].isInShip)
                     {
-                        //FileLog.Log("Found a body in ship");
+                        //FileLig.Log("Found a body in ship");
                         for (int v = 0; v < ___allPlayerScripts.Length; v++)
                         {
                             if (___allPlayerScripts[v].isPlayerDead && ___allPlayerScripts[v].deadBody == bodies[i])
                             {
-                                //FileLog.Log("Found the body's player");
+                                //FileLig.Log("Found the body's player");
 
                                 playersToRespawn.Add(___allPlayerScripts[v]);
 
@@ -62,7 +62,7 @@ namespace Permadeath.Patches
 
                     }
                 }
-                //FileLog.Log("----Running main respawn code-----");
+                //FileLig.Log("----Running main respawn code-----");
 
 
                 // code copied & modified from original revive players
@@ -74,11 +74,11 @@ namespace Permadeath.Patches
                     allPlayerScripts[i] = playersToRespawn[i];
                 }
 
-                //FileLog.Log("# Players to respawn: "+playersToRespawn.Count);
+                //FileLig.Log("# Players to respawn: "+playersToRespawn.Count);
                 __instance.allPlayersDead = false;
                 for (int i = 0; i < allPlayerScripts.Length; i++)
                 {
-                    //FileLog.Log("Respawning a player");
+                    //FileLig.Log("Respawning a player");
                     Debug.Log("Reviving players A");
                     allPlayerScripts[i].ResetPlayerBloodObjects(allPlayerScripts[i].isPlayerDead);
                     if (!allPlayerScripts[i].isPlayerDead && !allPlayerScripts[i].isPlayerControlled)
